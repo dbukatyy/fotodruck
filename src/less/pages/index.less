@@ -2,9 +2,71 @@ body {
 	min-height: 100vh;
 	padding-bottom: 150px;
 	position: relative;
+	font-size: 16px;
 }
 
 img {
 	max-width: 100%;
 	height: auto;
+}
+
+.section {
+	padding: 50px 0;
+
+	&_colored {
+		background: @c-orange;
+		color: @c-white;
+		font-weight: bold;
+	}
+
+	&__title {
+		text-align: center;
+		font-size: 3em;
+		color: @c-gray;
+		text-transform: uppercase;
+		margin-bottom: 50px;
+
+		&_light {
+			color: @c-white;
+		}
+	}
+}
+
+.list {
+	&__link {
+		color: @c-white;
+		transition: all .3s;
+
+		&:hover {
+			text-decoration: none;
+			color: @c-gray;
+		}
+	}
+}
+
+.events {
+
+	&__item {
+		height: 500px;
+		overflow: hidden;
+
+		img {
+			display: inline-block;
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+// portfolio
+
+.portfolio {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	&__item {
+		display: inline-block;
+		width: 18%;
+	}
 }
