@@ -1,1 +1,1 @@
-jQuery(document).ready(function(){$(".events").slick({autoplay:!0,dots:!0,autoplaySpeed:4e3})});
+jQuery(document).ready(function(){$(".events").slick({autoplay:!0,dots:!0,autoplaySpeed:4e3}),$(".portfolio__link").fancybox()});

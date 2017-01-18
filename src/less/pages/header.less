@@ -30,9 +30,33 @@
 		color: @c-white;
 		transition: all .3s;
 
+		&_active {
+			color: @c-gray;
+		}
+
 		&:hover {
 			color: @c-gray;
 			text-decoration: none;
 		}
+
+		&_dark {
+			color: @c-lgray;
+
+			&:hover {
+				color: @c-orange;
+			}
+		}
+
+		&_active-light {
+			color: @c-orange;
+		}
+
+	}
+
+	&_center {
+		width: 50%;
+		margin: 20px auto;
+
+
 	}
 }
