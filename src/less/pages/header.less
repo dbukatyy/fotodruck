@@ -1,0 +1,38 @@
+.header {
+	background: @c-orange;
+	padding: 20px 10px;
+
+	&__logo {
+		display: inline-block;
+		vertical-align: middle;
+		width: 30%;
+	}
+
+	&__menu {
+		display: inline-block;
+		vertical-align: middle;
+		width: 68%;
+	}
+}
+
+.menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+
+	&__link {
+		text-transform: lowercase;
+		font-weight: 600;
+		color: @c-white;
+		transition: all .3s;
+
+		&:hover {
+			color: @c-gray;
+			text-decoration: none;
+		}
+	}
+}
