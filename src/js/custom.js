@@ -9,6 +9,44 @@ jQuery(document).ready(function () {
 
 	// fancybox
 	$(".portfolio__link").fancybox();
+
+	// aside-menu
+	var slideout = new Slideout({
+        'panel': document.getElementById('panel'),
+        'menu': document.getElementById('menu'),
+        'padding': 256,
+        'tolerance': 70,
+        'side' : 'right'
+      });
+
+	// hamburger
+
+    $('.hamburger').on('click', function (e) {
+    	slideout.open();
+    });
+
+    $('.btn-close').on('click', function (e) {
+    	slideout.close();
+    });
+    
+    var flag = false;
+
+    $(document).on('scroll', function (e) {
+
+    	var scrollTop = $(this).scrollTop();
+
+    	if (scrollTop > 400) {
+
+    		if (!flag) {
+    			$('.header').hide().addClass('header_fixed').slideDown(200);
+    			flag = true;
+    		}
+
+    	} else if (scrollTop < 400) {
+    		$('.header').removeClass('header_fixed');
+    		flag = false;
+    	}
+    });
 });
 
 
