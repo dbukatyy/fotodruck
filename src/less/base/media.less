@@ -18,6 +18,21 @@
 		width: 30%;
 		text-align: center;
 		margin: 10px 5px;
+
+		&_sm {
+			width: 20%;
+		}
+	}
+
+	.product {
+		&__media {
+			width: 100%;
+			margin-right: 0;
+		}
+
+		&__description {
+			width: 100%;
+		}
 	}
 }
 
@@ -30,6 +45,9 @@
 		padding: 70px 10px 10px;
 
 		&__kontact {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
 			right: 0;
 			top: -60px;
 		}
@@ -38,16 +56,36 @@
 			padding: 40px 10px 10px;
 
 			.header__kontact {
-				top: -30px;
+				top: -35px;
+			}
+
+			.tel {
+				font-size: 1em;
 			}
 		}
 	}
 
-	.section__title {
-		font-size: 2.5em;
+	.section {
+		padding: 10px 0;
+
+		&__title {
+			font-size: 2.5em;
+			margin: 15px 0;
+		}
 	}
 
-	.portfolio__item {
-		width: 100%;
+	.portfolio {
+		justify-content: center;
+		&__item {
+			width: 100%;
+
+			&_sm {
+				width: 80%;
+			}
+		}
+	}
+
+	.tel {
+		margin: 0;
 	}
 }

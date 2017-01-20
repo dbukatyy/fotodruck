@@ -3,6 +3,7 @@ body {
 	padding-bottom: 380px;
 	position: relative;
 	font-size: 16px;
+	font-family: 'Arsenal';
 }
 
 img {
@@ -49,12 +50,11 @@ img {
 }
 
 .section {
-	padding: 50px 0;
+	padding: 10px 0 40px;
 
 	&_colored {
 		background: @c-orange;
 		color: @c-white;
-		font-weight: bold;
 	}
 
 	&__title {
@@ -63,6 +63,7 @@ img {
 		color: @c-gray;
 		text-transform: uppercase;
 		margin-bottom: 50px;
+		font-weight: 300;
 
 		&_light {
 			color: @c-white;
@@ -70,7 +71,12 @@ img {
 	}
 }
 
+.products {
+	font-size: 1.2em;
+}
+
 .list {
+
 	&__link {
 		color: @c-white;
 		transition: all .3s;
@@ -79,6 +85,19 @@ img {
 			text-decoration: none;
 			color: @c-gray;
 		}
+
+		&_dark {
+			color: @c-gray;
+
+			&:hover {
+				color: @c-orange;				
+			}
+		}
+	}
+
+	&_iconed {
+		list-style: none;
+		padding: 0;
 	}
 }
 
@@ -106,5 +125,10 @@ img {
 	&__item {
 		display: inline-block;
 		width: 18%;
+		margin: 10px;
+
+		&_sm {
+			width: 20%;
+		}
 	}
 }
