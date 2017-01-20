@@ -1,5 +1,7 @@
 jQuery(document).ready(function () {
 
+    var flag = false;
+
 	// slick
 	$('.events').slick({
 		 autoplay: true,
@@ -29,8 +31,8 @@ jQuery(document).ready(function () {
     	slideout.close();
     });
     
-    var flag = false;
 
+    // fixed menu
     $(document).on('scroll', function (e) {
 
     	var scrollTop = $(this).scrollTop();
@@ -39,14 +41,26 @@ jQuery(document).ready(function () {
 
     		if (!flag) {
     			$('.header').hide().addClass('header_fixed').slideDown(200);
+                $('.to-top').fadeIn(500);
     			flag = true;
     		}
 
     	} else if (scrollTop < 400) {
     		$('.header').removeClass('header_fixed');
+             $('.to-top').fadeOut(200);
     		flag = false;
     	}
     });
+
+    $('.to-top').on('click', function (e) {
+        var scrollTop = $(document).scrollTop(),
+            counter = 10;
+            console.log(scrollTop);
+
+        
+        }
+    });
+
 });
 
 

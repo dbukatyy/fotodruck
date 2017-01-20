@@ -16,6 +16,7 @@ img {
 	z-index: 110;
 }
 
+
 .btn-close {
 	position: absolute;
 	top: 30px;
@@ -69,6 +70,18 @@ img {
 			color: @c-white;
 		}
 	}
+
+	&_bg {
+		background: url('../../img/top-bgr.png') 50% no-repeat;
+		background-size: cover;
+		color: @c-white;
+		padding: 100px 0 130px;
+	}
+
+	&__icon {
+		text-align: center;
+		padding: 60px 0 0;
+	}
 }
 
 .products {
@@ -102,15 +115,19 @@ img {
 }
 
 .events {
+	width: 90%;
+	margin: 0 auto;
 
 	&__item {
 		height: 500px;
 		overflow: hidden;
+		text-align: center;
 
 		img {
 			display: inline-block;
-			width: 100%;
-			height: auto;
+			max-width: 100000px;
+			width: auto;
+			height: 100%;
 		}
 	}
 }
@@ -121,11 +138,13 @@ img {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	align-items: center;
+
 
 	&__item {
-		display: inline-block;
 		width: 18%;
 		margin: 10px;
+		text-align: center;
 
 		&_sm {
 			width: 20%;
